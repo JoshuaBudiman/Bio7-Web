@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BabController;
+use App\Http\Controllers\MaterialController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +18,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('homepage');
+});
+
+Route::resource('bab', BabController::class);
+Route::resource('material', MaterialController::class);
+Route::get('/studentlogin', function(){
+    return view('login');
+});
+Route::get('/studentregister', function(){
+    return view('register');
 });
 
 Auth::routes();
