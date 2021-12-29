@@ -9,6 +9,4 @@
         <img class="img-fluid mx-auto d-block" src="img/materiicon.png" alt="" width="150">
     </button>
 </div>
-
-
 @endsection
