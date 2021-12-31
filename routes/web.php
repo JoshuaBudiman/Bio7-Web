@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('/quizView1', function () {
+    return view('quizView2');
+});
+
 Route::resource('bab', BabController::class);
 Route::resource('material', MaterialController::class);
 Route::get('/studentlogin', function(){

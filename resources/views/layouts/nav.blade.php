@@ -9,6 +9,9 @@
               <li class="nav-item">
                 <a class="nav-link fw-bold" href="/material">Materi</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="/quizView1">Quiz</a>
+              </li>
             </ul>
 
             <ul class="navbar-nav ms-auto">
