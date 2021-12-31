@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Material;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class MaterialController extends Controller
 {
@@ -13,6 +15,7 @@ class MaterialController extends Controller
      */
     public function index()
     {
+        $materials = Material::all();
         return view('material');
     }
 
@@ -23,6 +26,7 @@ class MaterialController extends Controller
      */
     public function create()
     {
+
         //
     }
 
@@ -34,6 +38,14 @@ class MaterialController extends Controller
      */
     public function store(Request $request)
     {
+        $material_id = Str::upper(Str::substr($request->material, 0, 3));
+
+        Material::create([
+            'material_id' => $material_id,
+            'bab_material' => $request->bab_material,
+            'desc_material' => $request->desc_material
+        ]);
+        return redirect(route('mtaterial.index'));
         //
     }
 
@@ -43,8 +55,10 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($material_id)
     {
+        $material = Material::where('id', $material_id)->first();
+        return view('material', compact('material'));
         //
     }
 
@@ -54,7 +68,7 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($material_id)
     {
         //
     }
@@ -66,7 +80,7 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $material_id)
     {
         //
     }
@@ -77,7 +91,7 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($material_id)
     {
         //
     }

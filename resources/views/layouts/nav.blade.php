@@ -4,25 +4,20 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav">
+                <a class="nav-link fw-bold" href="/">Home</a>
               <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link fw-bold" href="/material">Materi</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/bab">Kuis</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/material">Materi</a>
-              </li>  
             </ul>
 
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/studentlogin">Login</a>
+                <a class="nav-link fw-bold" href="/studentlogin">Login</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/studentregister">Register</a>
+                <a class="nav-link fw-bold" href="/studentregister">Register</a>
               </li>
             </ul>
           </div>

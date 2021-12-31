@@ -10,7 +10,7 @@ class Student extends Model
     use HasFactory;
 
     protected $table = 'students';
-
+    protected $primaryKey = "student_id";
     protected $fillable =[
         'email',
         'password',
@@ -20,4 +20,8 @@ class Student extends Model
         'city',
         'birthyear'
     ];
+
+    public function material(){
+        return $this->belongsToMany(Material::class, 'material_students', 'student_id', 'material_id')->withPivot('created_at');
+    }
 }

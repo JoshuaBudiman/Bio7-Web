@@ -2,7 +2,7 @@
 
 @section('main_content')
 
-<div class="container pt-5 my-5">
+<div class="container pt-5 my-5 text-white fw-bold">
     <form action="#" >
         @csrf
         <label class="form-label" for="username">Username</label>
@@ -11,10 +11,10 @@
         <input class="form-control" type="password" name="password">
         <br>
         <br>
-        <button type="submit" class="btn btn-info" >Submit</button>
-        
+        <button type="submit" class="btn btn-info fw-bold" >Submit</button>
+
     </form>
 </div>
 
-    
+
 @endsection

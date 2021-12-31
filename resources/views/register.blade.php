@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main_content')
-<div class="container p-5">
+<div class="container p-5 text-white fw-bold">
     <form action="#" >
         @csrf
         <label class="form-label" for="email">Email</label>
@@ -20,8 +20,8 @@
         <input class="form-control" type="text" name="birthyear">
         <br>
         <br>
-        <button type="submit" class="btn btn-info" >Submit</button>
-        
+        <button type="submit" class="btn btn-info fw-bold" >Submit</button>
+
     </form>
 </div>
 @endsection
