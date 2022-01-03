@@ -24,7 +24,6 @@ class LoginController extends Controller
         $user = [
             'email' => $request->email,
             'password' => $request->password,
-            'role' => 'admin',
             'is_login' => '0',
             'is_active' => '1'
         ];
@@ -36,7 +35,7 @@ class LoginController extends Controller
                 if (Auth::attempt($user)) {
                     $this->isLogin(Auth::id());
 
-                    $response = Http::asForm()->post('http://webapi.test/oauth/token', [
+                    $response = Http::asForm()->post('http://localhost/WebDevelopment/Laravel/Bio7-Web/public/oauth/token', [
                         'grant_type' => 'password',
                         'client_id' => $this->client->id,
                         'client_secret' => $this->client->secret,
@@ -76,7 +75,7 @@ class LoginController extends Controller
             'refresh_token' => 'Refresh token is required'
         ]);
 
-        $response = Http::asForm()->post('http://webapi.test/oauth/token', [
+        $response = Http::asForm()->post('http://localhost/WebDevelopment/Laravel/Bio7-Web/public/oauth/token', [
             'grant_type' => 'refresh_token',
             'refresh_token' => $request->refresh_token,
             'client_id' => $this->client->id,

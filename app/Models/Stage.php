@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Bab extends Model
+class Stage extends Model
 {
     use HasFactory;
 
-    protected $table = 'bab';
-    protected $primaryKey = 'bab_id';
+    protected $table = 'stage';
+    protected $primaryKey = 'stage_id';
     protected $fillable = [
-        'bab_id',
-        'bab'
+        'stage_id',
+        'stage',
+        'bab_id'
     ];
-
 }

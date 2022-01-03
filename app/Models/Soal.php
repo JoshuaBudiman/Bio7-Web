@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Bab extends Model
+class Soal extends Model
 {
     use HasFactory;
 
-    protected $table = 'bab';
-    protected $primaryKey = 'bab_id';
+    protected $table = 'soal';
+    protected $primaryKey = 'soal_id';
     protected $fillable = [
-        'bab_id',
-        'bab'
+        'soal_id',
+        'soal_text',
+        'stage_id'
     ];
-
 }
