@@ -15,7 +15,7 @@ class RelationHistoryStageStudents extends Migration
     {
         Schema::table('history', function (Blueprint $table) {
                 $table->foreign('student_id')
-                ->references('student_id')->on('students')
+                ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 

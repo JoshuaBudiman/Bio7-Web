@@ -22,7 +22,7 @@ class CreateMaterialStudentsTable extends Migration
 
         Schema::table('material_students', function (Blueprint $table) {
             $table->foreign('student_id')
-                ->references('student_id')->on('students')
+                ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 

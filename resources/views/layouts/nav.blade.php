@@ -16,11 +16,11 @@
 
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link fw-bold" href="/studentlogin">Login</a>
+                <a class="nav-link fw-bold" href="/login">Login</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link fw-bold" href="/studentregister">Register</a>
+                <a class="nav-link fw-bold" href="/register">Register</a>
               </li>
             </ul>
           </div>

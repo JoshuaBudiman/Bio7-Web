@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username',
+        'school',
+        'city',
+        'birthyear'
     ];
 
     /**
@@ -41,4 +45,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function material(){
+        return $this->belongsToMany(Material::class, 'material_students', 'student_id', 'material_id')->withPivot('created_at');
+    }
 }

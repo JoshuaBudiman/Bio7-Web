@@ -12,9 +12,7 @@
         <br>
         <br>
         <button type="submit" class="btn btn-info fw-bold" >Submit</button>
-
     </form>
+
 </div>
-
-
 @endsection
