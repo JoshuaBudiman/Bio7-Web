@@ -45,7 +45,7 @@ class MaterialController extends Controller
             'bab_material' => $request->bab_material,
             'desc_material' => $request->desc_material
         ]);
-        return redirect(route('mtaterial.index'));
+        return redirect(route('material.index'));
         //
     }
 
