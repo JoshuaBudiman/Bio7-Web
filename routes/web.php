@@ -26,10 +26,10 @@ Route::get('/quizView1', function () {
 
 Route::resource('bab', BabController::class);
 Route::resource('material', MaterialController::class);
-Route::get('/studentlogin', function(){
+Route::get('/login', function(){
     return view('login');
 });
-Route::get('/studentregister', function(){
+Route::get('/register', function(){
     return view('register');
 });
 

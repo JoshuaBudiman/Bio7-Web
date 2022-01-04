@@ -49,4 +49,4 @@
         <h2>Bab 11</h2>
     </button>
 </div>
-@endsection()
+@endsection
