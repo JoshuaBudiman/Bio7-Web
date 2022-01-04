@@ -15,7 +15,6 @@ class CreateHistoryTable extends Migration
     {
         Schema::create('history', function (Blueprint $table) {
             $table->id('history_id');
-            $table->string('history_player');
             $table->string('score');
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('stage_id');
