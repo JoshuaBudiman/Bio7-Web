@@ -16,18 +16,32 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'password' => Hash::make('admin123'),
+            'name' => 'Jon',
+            'school' => 'SMA 1',
+            'city' => 'Surabyaa',
+            'birthyear' => '2001',
+            'username' => 'jft',
+            'email' => 'jhon@gmail.com',
+            'email_verified_at' => \Carbon\Carbon::now(),
+            'password' => Hash::make('user123'),
+            'is_login' => '0',
+            'is_login' => '1',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now(),
         ]);
         DB::table('users')->insert([
-            'name' => 'User',
-            'email' => 'user@gmail.com',
-            'password' => Hash::make('user123'),
+            'name' => 'Ivan',
+            'school' => 'SMA 1',
+            'city' => 'Ambon',
+            'birthyear' => '2001',
+            'username' => 'Ivanvc',
+            'email' => 'ivan@gmail.com',
+            'email_verified_at' => \Carbon\Carbon::now(),
+            'password' => Hash::make('ivanvincent'),
+            'is_login' => '0',
+            'is_login' => '1',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now(),
         ]);
     }
 }
