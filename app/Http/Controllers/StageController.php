@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Material;
+use App\Models\Stage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
-class MaterialController extends Controller
+class StageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class MaterialController extends Controller
      */
     public function index()
     {
-        $materials = Material::all();
-        return view('material', compact('materials'));
+        $stages = Stage::all();
+        return view('stage', compact('stages'));
     }
 
     /**
@@ -26,7 +25,6 @@ class MaterialController extends Controller
      */
     public function create()
     {
-
         //
     }
 
@@ -38,14 +36,6 @@ class MaterialController extends Controller
      */
     public function store(Request $request)
     {
-        $material_id = Str::upper(Str::substr($request->material, 0, 3));
-
-        Material::create([
-            'material_id' => $material_id,
-            'bab_material' => $request->bab_material,
-            'desc_material' => $request->desc_material
-        ]);
-        return redirect(route('material.index'));
         //
     }
 
@@ -55,10 +45,8 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($material_id)
+    public function show($id)
     {
-        $material = Material::where('id', $material_id)->first();
-        return view('material', compact('material'));
         //
     }
 
@@ -68,7 +56,7 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($material_id)
+    public function edit($id)
     {
         //
     }
@@ -80,7 +68,7 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $material_id)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -91,7 +79,7 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($material_id)
+    public function destroy($id)
     {
         //
     }

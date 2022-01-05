@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
             'email_verified_at' => \Carbon\Carbon::now(),
             'password' => Hash::make('user123'),
             'is_login' => '0',
-            'is_login' => '1',
+            'is_active' => '1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
             'email_verified_at' => \Carbon\Carbon::now(),
             'password' => Hash::make('ivanvincent'),
             'is_login' => '0',
-            'is_login' => '1',
+            'is_active' => '1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);

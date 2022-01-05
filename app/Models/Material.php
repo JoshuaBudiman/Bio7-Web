@@ -15,6 +15,6 @@ class Material extends Model
 
 
 public function student(){
-    return $this->belongsToMany(Student::class, 'material_students', 'material_id', 'student_id')->withPivot('created_at');
+    return $this->belongsToMany(User::class, 'material_students', 'material_id', 'student_id')->withPivot('created_at');
     }
 }

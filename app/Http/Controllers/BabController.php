@@ -16,7 +16,7 @@ class BabController extends Controller
     public function index()
     {
         $babs = Bab::all();
-        return view('bab');
+        return view('bab', compact('babs'));
     }
 
     /**
@@ -56,7 +56,7 @@ class BabController extends Controller
     public function show($bab_id)
     {
         $babs = Bab::where('id', $bab_id)->first();
-        return view('bab', compact('bab'));
+        return view('bab', compact('babs'));
         //
     }
 

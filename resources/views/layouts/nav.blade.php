@@ -5,13 +5,9 @@
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <a class="nav-link fw-bold" href="/">Home</a>
-              <li class="nav-item">
-                <a class="nav-link fw-bold" href="/material">Materi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fw-bold" href="/bab">Quiz</a>
-              </li>
+                <li>
+                    <a class="nav-link fw-bold" href="/">Home</a>
+                </li>
             </ul>
 
             <ul class="navbar-nav ms-auto">
