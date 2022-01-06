@@ -1,13 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Student;
 use Illuminate\Http\Request;
-use App\Http\Resources\StudentResource;
 
-class StudentsController extends Controller
+class HistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +13,7 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        $student = Student::all();
-        return ['student' => StudentResource::collection($student)];
+        //
     }
 
     /**
@@ -49,8 +45,7 @@ class StudentsController extends Controller
      */
     public function show($id)
     {
-        $student = Student::all()->where('student_id', $id);
-        return ['student' => StudentResource::collection($student)];
+        //
     }
 
     /**

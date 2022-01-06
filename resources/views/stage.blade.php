@@ -12,7 +12,7 @@
         <h2>{{$stage['stage']}}</h2>
     </button>
     @endforeach
-    
+
 
 </div>
 @endsection
