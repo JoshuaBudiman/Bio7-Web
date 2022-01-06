@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\api\studentDetailController as ApiStudentDetailController;
 use Illuminate\Http\Request;
 use App\Models\StudentDetail;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class studentDetailController extends Controller
@@ -55,6 +57,10 @@ class studentDetailController extends Controller
      */
     public function show($id)
     {
+        $title = 'My Profile';
+        $studentDetail = StudentDetail::where('id', Auth::user()->id)->first();
+        return view('detailStudent', compact('title', 'studentDetail'));
+
         //
     }
 
@@ -90,6 +96,9 @@ class studentDetailController extends Controller
      */
     public function destroy($id)
     {
+        $studentDetail = StudentDetail::findOrFail($id);
+        $studentDetail->delete();
+        return redirect(route('home.index'));
         //
     }
 }
