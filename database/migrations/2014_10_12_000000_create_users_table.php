@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->enum('is_login', ['0', '1'])->default('0');
             $table->enum('is_active', ['0', '1'])->default('1');
             $table->rememberToken();
+            $table->string('role')->default('user');
             $table->timestamps();
         });
     }
