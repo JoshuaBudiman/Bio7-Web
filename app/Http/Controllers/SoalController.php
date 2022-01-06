@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Soal;
 use Illuminate\Http\Request;
-use App\Models\Bab;
-use Illuminate\Support\Str;
 
-class BabController extends Controller
+use function GuzzleHttp\Promise\all;
+
+class SoalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class BabController extends Controller
      */
     public function index()
     {
-        $babs = Bab::all();
-        return view('bab', compact('babs'));
+        $soal = Soal::all();
+        return view('soalquiz', compact('soal'));
     }
 
     /**
@@ -37,13 +38,6 @@ class BabController extends Controller
      */
     public function store(Request $request)
     {
-        $bab_id = Str::upper(Str::substr($request->bab, 0, 3));
-
-        Bab::create([
-            'bab_id' => $bab_id,
-            'bab' => $request->bab,
-        ]);
-        return redirect(route('bab.index'));
         //
     }
 
@@ -55,8 +49,6 @@ class BabController extends Controller
      */
     public function show($id)
     {
-        $babs = Bab::where('id', $id)->first();
-        return view('bab', compact('babs'));
         //
     }
 
@@ -66,7 +58,7 @@ class BabController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($bab_id)
+    public function edit($id)
     {
         //
     }
@@ -78,7 +70,7 @@ class BabController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $bab_id)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -89,7 +81,7 @@ class BabController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($bab_id)
+    public function destroy($id)
     {
         //
     }

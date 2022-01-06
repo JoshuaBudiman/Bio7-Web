@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BabController;
 use App\Http\Controllers\MaterialController;
+use App\Http\Controllers\SoalController;
+use App\Http\Controllers\StageController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +28,8 @@ Route::get('/quizView1', function () {
 
 Route::resource('bab', BabController::class);
 Route::resource('material', MaterialController::class);
+Route::resource('stage', StageController::class);
+Route::resource('soal', SoalController::class);
 Route::get('/login', function(){
     return view('login');
 });

@@ -25,4 +25,4 @@
         <h1>D.</h1>
     </button>
 </div>
-@endsection()
+@endsection
