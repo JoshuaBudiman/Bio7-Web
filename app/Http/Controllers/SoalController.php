@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Soal;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 use function GuzzleHttp\Promise\all;
@@ -49,6 +50,8 @@ class SoalController extends Controller
      */
     public function show($id)
     {
+        $soal = Soal::where('id', $id)->first();
+        return view('soalquiz', compact('soal'));
         //
     }
 

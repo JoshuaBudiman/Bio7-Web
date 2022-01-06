@@ -8,10 +8,10 @@
     </div>
 </div>
 
-<div class="container pt-5 my-5 ">
+<div class="container pt-5 my-5 text-white ">
 
     @foreach ($stage->soals as $soal)
-        <h3>{{$loop->iteration}}. 
+        <h3>{{$loop->iteration}}.
             {{$soal->soal_text}}</h3>
 
             @foreach ($soal->opsiJawabans as $opsi)
@@ -21,6 +21,6 @@
             <br>
             @endforeach
     @endforeach
-    
+
 </div>
 @endsection

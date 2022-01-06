@@ -8,6 +8,10 @@
                 <li>
                     <a class="nav-link fw-bold" href="/">Home</a>
                 </li>
+
+                <li>
+                    <a class="nav-link fw-bold" href="/profile">Profile</a>
+                </li>
             </ul>
 
             <ul class="navbar-nav ms-auto">

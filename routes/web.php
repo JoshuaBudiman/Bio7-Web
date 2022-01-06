@@ -4,6 +4,7 @@ use App\Http\Controllers\BabController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\SoalController;
 use App\Http\Controllers\StageController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('homepage');
+});
+
+Route::get('/profile', function () {
+    return view('detailStudent');
 });
 
 Route::get('/quizView1', function () {

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\StudentDetail;
+use Illuminate\Support\Str;
 
 class studentDetailController extends Controller
 {
@@ -13,6 +15,8 @@ class studentDetailController extends Controller
      */
     public function index()
     {
+        $studentDetail = StudentDetail::all();
+        return view('detailStudent', compact('studentDetail'));
         //
     }
 
@@ -34,6 +38,12 @@ class studentDetailController extends Controller
      */
     public function store(Request $request)
     {
+        StudentDetail::create([
+            'student_detail_id' => $request->student_detail_id,
+            'student_profpic' => $request->student_profpic,
+            'student_id' => $request->student_id,
+        ]);
+        return redirect(route('history.index'));
         //
     }
 
@@ -56,6 +66,7 @@ class studentDetailController extends Controller
      */
     public function edit($id)
     {
+        return view('editDetailStudent');
         //
     }
 

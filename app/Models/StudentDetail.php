@@ -5,24 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class History extends Model
+class StudentDetail extends Model
 {
     use HasFactory;
 
-    protected $table = 'history';
-    protected $primaryKey = 'history_id';
+    protected $table = 'student_details';
+    protected $primaryKey = 'student_details_id';
     protected $fillable = [
-        'history_id',
-        'history_player',
-        'score',
-        'student_id',
-        'stage_id',
-        'created_at',
-        'updated_at'
+        'student_detail_id',
+        'student_profpic',
+        'student_id'
     ];
 
     public function student(){
         return $this->belongsTo(User::class, 'student_id', 'id');
-        }
     }
-
+}

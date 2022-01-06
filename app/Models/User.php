@@ -49,4 +49,12 @@ class User extends Authenticatable
     public function material(){
         return $this->belongsToMany(Material::class, 'material_students', 'student_id', 'material_id')->withPivot('created_at');
     }
+
+    public function history(){
+        return $this->hasMany(History::class, 'student_id', 'history_id');
+    }
+
+    public function studentDetails(){
+        return $this->hasOne(StudentDetail::class, 'student_id', 'student_detail_id');
+    }
 }

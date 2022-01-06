@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\History;
+use Illuminate\Support\Str;
 
 class HistoryController extends Controller
 {
@@ -13,6 +15,8 @@ class HistoryController extends Controller
      */
     public function index()
     {
+        $historys = History::all();
+        return view('history', compact('historys'));
         //
     }
 
@@ -34,6 +38,12 @@ class HistoryController extends Controller
      */
     public function store(Request $request)
     {
+        History::create([
+            'score' => $request->score,
+            'student_id' => $request->student_id,
+            'stage_id' => $request->stage_id,
+        ]);
+        return redirect(route('history.index'));
         //
     }
 
