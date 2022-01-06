@@ -55,10 +55,10 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($material_id)
+    public function show($id)
     {
-        $material = Material::where('id', $material_id)->first();
-        return view('material', compact('material'));
+        $material = Material::where('material_id', $id)->first();
+        return view('showmaterial', compact('material'));
         //
     }
 

@@ -55,8 +55,8 @@ class BabController extends Controller
      */
     public function show($id)
     {
-        $babs = Bab::where('id', $id)->first();
-        return view('bab', compact('babs'));
+        
+        return view('stage', ['bab'=> Bab::where('bab_id', $id)->first()]);
         //
     }
 
