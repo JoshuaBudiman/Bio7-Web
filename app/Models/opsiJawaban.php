@@ -17,4 +17,8 @@ class opsiJawaban extends Model
         'opsi_istrue',
         'soal_id'
     ];
+
+    public function soal(){
+        return $this->belongsTo(Soal::class, 'soal_id', 'soal_id');
+    }
 }

@@ -47,7 +47,8 @@ class StageController extends Controller
      */
     public function show($id)
     {
-        //
+        $stage = Stage::where('stage_id', $id)->first();
+        return view('soalquiz', compact('stage'));
     }
 
     /**
