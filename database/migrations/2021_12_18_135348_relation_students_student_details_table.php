@@ -18,6 +18,11 @@ class RelationStudentsStudentDetailsTable extends Migration
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+
+                // $table->foreign('name')
+                // ->references('name')->on('users')
+                // ->onDelete('cascade')
+                // ->onUpdate('cascade');
             });
     }
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\SoalController;
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\studentDetailController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::resource('bab', BabController::class);
 Route::resource('material', MaterialController::class);
 Route::resource('stage', StageController::class);
 Route::resource('soal', SoalController::class);
+Route::resource('studentDetail', studentDetailController::class);
 Route::get('/login', function(){
     return view('login');
 });

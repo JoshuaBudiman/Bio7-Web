@@ -16,6 +16,7 @@ class CreateStudentDetailsTable extends Migration
         Schema::create('student_details', function (Blueprint $table) {
             $table->id('student_detail_id');
             $table->text('student_profpic');
+          //  $table->unsignedBigInteger('name');
             $table->unsignedBigInteger('student_id');
         });
     }

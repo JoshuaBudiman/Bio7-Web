@@ -20,5 +20,17 @@ class BabSeeder extends Seeder
         DB::table('bab')->insert([
             'bab' => 'Bab 2'
         ]);
+        DB::table('bab')->insert([
+            'bab' => 'Bab 3'
+        ]);
+        DB::table('bab')->insert([
+            'bab' => 'Bab 4'
+        ]);
+        DB::table('bab')->insert([
+            'bab' => 'Bab 5'
+        ]);
+        DB::table('bab')->insert([
+            'bab' => 'Bab 6'
+        ]);
     }
 }
