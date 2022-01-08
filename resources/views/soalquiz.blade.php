@@ -8,16 +8,19 @@
     </div>
 </div>
 
-<div class="container pt-5 my-5 text-white ">
+<div class="container pt-5 my-5 text-white">
 
     @foreach ($stage->soals as $soal)
         <h3>{{$loop->iteration}}.
             {{$soal->soal_text}}</h3>
-
+            <br>
             @foreach ($soal->opsiJawabans as $opsi)
-            <button class="btn btn-warning m-2 p-2">
-                <h4>{{$opsi['opsi_jawaban']}}</h4>
-            </button>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    <h4>{{$opsi['opsi_jawaban']}}</h4>
+                </label>
+              </div>
             <br>
             @endforeach
     @endforeach

@@ -45,7 +45,7 @@ class studentDetailController extends Controller
             'student_profpic' => $request->student_profpic,
             'student_id' => $request->student_id,
         ]);
-        return redirect(route('history.index'));
+        return redirect(route('profile.index'));
         //
     }
 
@@ -60,7 +60,6 @@ class studentDetailController extends Controller
         $title = 'My Profile';
         $studentDetail = StudentDetail::where('id', Auth::user()->id)->first();
         return view('detailStudent', compact('title', 'studentDetail'));
-
         //
     }
 

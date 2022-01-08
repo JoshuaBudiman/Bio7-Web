@@ -3,11 +3,12 @@
 @section('main_content')
 <div class="container-sm text-center">
 <br>
-    <img class="text-center" src="img/user.jpg" alt="User profile picture">
     @foreach ($studentDetails as $stdDetail)
-    <a class="btn btn-warning m-5 p-3" href="{{route('profile.show', $stdDetail->student_detail_id)}}">
-    <h2>Profile {{$stdDetail['student_profpic']}}</h2>
-    </a>
+    <div class="container text-white" href="{{route('profile.show', $stdDetail->student_detail_id)}}">
+    <img class="text-center" src="{{$stdDetail['student_profpic']}}"
+    <br>
+    </div>
+
 @endforeach
 
 <div class="row text-white fw-bold fs-3">
