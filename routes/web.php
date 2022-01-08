@@ -24,10 +24,6 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('/profile', function () {
-    return view('detailStudent');
-});
-
 Route::get('/quizView1', function () {
     return view('quizView2');
 });
@@ -36,7 +32,8 @@ Route::resource('bab', BabController::class);
 Route::resource('material', MaterialController::class);
 Route::resource('stage', StageController::class);
 Route::resource('soal', SoalController::class);
-Route::resource('studentDetail', studentDetailController::class);
+Route::resource('profile', studentDetailController::class);
+
 Route::get('/login', function(){
     return view('login');
 });

@@ -22,5 +22,12 @@
             @endforeach
     @endforeach
 
+    <br>
+    <div class="container-sm text-center text-white fs-1">
+    <button class="btn btn-warning m-5 p-3">
+        <h4>Finish</h4>
+    </button>
+</div>
+
 </div>
 @endsection

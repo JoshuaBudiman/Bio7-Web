@@ -18,7 +18,7 @@ class studentDetailController extends Controller
     public function index()
     {
         $studentDetails = StudentDetail::all();
-        return view('detailStudent', compact('studentDetail'));
+        return view('detailStudent', compact('studentDetails'));
         //
     }
 
