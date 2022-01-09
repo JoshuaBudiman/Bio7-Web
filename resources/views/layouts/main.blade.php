@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="css/app.css">
     <title>BioQuiz</title>
 </head>
-<body style="background-image: url('img/web1.jpg');">
+<body class="bg-primary"
+<body style="background-image: url('img/web4.jpg');">
     @include('layouts.nav')
     <div class="container-fluid ">
         @yield('main_content')
     </div>
-
+</body>
 </body>
 </html>
