@@ -55,7 +55,7 @@ class BabController extends Controller
      */
     public function show($id)
     {
-        
+
         return view('stage', ['bab'=> Bab::where('bab_id', $id)->first()]);
         //
     }

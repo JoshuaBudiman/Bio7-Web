@@ -27,10 +27,9 @@
 
     <br>
     <div class="container-sm text-center text-white fs-1">
-    <button class="btn btn-warning m-5 p-3">
+    <a class="btn btn-warning m-5 p-3" href="">
         <h4>Finish</h4>
-    </button>
+    </a>
 </div>
-
 </div>
 @endsection
