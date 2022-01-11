@@ -5,11 +5,7 @@
 <br>
     @foreach ($studentDetails as $stdDetail)
     <div class="container text-white fs-4" href="{{route('profile.show', $stdDetail->student_detail_id)}}">
-    Email : {{$stdDetail['student_profpic']}}
-    Username : {{$stdDetail['student_profpic']}}
-    School : {{$stdDetail['student_profpic']}}
-    City : {{$stdDetail['student_profpic']}}
-    Birthyear : {{$stdDetail['student_profpic']}}
+    <a class="container"> {{$stdDetail['student_profpic']}} </a>
     <br>
     </div>
 

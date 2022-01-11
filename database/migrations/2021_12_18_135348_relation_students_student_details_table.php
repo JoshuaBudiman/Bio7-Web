@@ -20,7 +20,6 @@ class RelationStudentsStudentDetailsTable extends Migration
                 ->onUpdate('cascade');
             });
     }
-
     /**
      * Reverse the migrations.
      *
