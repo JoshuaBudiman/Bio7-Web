@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             opsiJawabanSeeder::class,
             HistorySeeder::class,
             materialStudentSeeder::class,
+            StudentDetailsSeeder::class
         ]);
     }
 }

@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="css/app.css">
     <title>BioQuiz</title>
 </head>
-<body class="bg-primary"
-<body style="background-image: url('img/web4.jpg');">
+<body class="bg-primary" style="background-image: url('img/web4.jpg');">
     @include('layouts.nav')
     <div class="container-fluid ">
         @yield('main_content')

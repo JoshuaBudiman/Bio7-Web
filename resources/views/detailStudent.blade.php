@@ -4,8 +4,8 @@
 <div class="container-sm text-center">
 <br>
     @foreach ($studentDetails as $stdDetail)
-    <div class="container text-white fs-4" href="{{route('profile.show', $stdDetail->student_detail_id)}}">
-    <a class="container"> {{$stdDetail['student_profpic']}} </a>
+    <div class="container text-white fs-4" >
+    <img class ="img-fluid" src="{{$stdDetail['student_profpic']}}" alt=""> 
     <br>
     </div>
 

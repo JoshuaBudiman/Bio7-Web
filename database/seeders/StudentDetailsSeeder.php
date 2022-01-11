@@ -16,12 +16,12 @@ class StudentDetailsSeeder extends Seeder
     public function run()
     {
         DB::table('student_details')->insert([
-            'student_profpic' => '/public/img/user.jpg',
+            'student_profpic' => '/img/user.jpg',
             'student_id' => '1'
         ]);
 
         DB::table('student_details')->insert([
-            'student_profpic' => '/public/img/user.jpg',
+            'student_profpic' => '/img/user.jpg',
             'student_id' => '2'
         ]);
          //
