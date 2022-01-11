@@ -43,6 +43,16 @@ Route::get('/register', function(){
 
 Auth::routes();
 
+Route::middleware(['auth'])->group(function(){
+    Route::middleware(['admin'])->group(function () {
+
+    });
+
+    Route::middleware(['user'])->group(function () {
+    });
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 

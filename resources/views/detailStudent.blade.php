@@ -4,13 +4,16 @@
 <div class="container-sm text-center">
 <br>
     @foreach ($studentDetails as $stdDetail)
-    <div class="container text-white" href="{{route('profile.show', $stdDetail->student_detail_id)}}">
-    <img class="text-center" src="{{$stdDetail['student_profpic']}}"
+    <div class="container text-white fs-4" href="{{route('profile.show', $stdDetail->student_detail_id)}}">
+    Email : {{$stdDetail['student_profpic']}}
+    Username : {{$stdDetail['student_profpic']}}
+    School : {{$stdDetail['student_profpic']}}
+    City : {{$stdDetail['student_profpic']}}
+    Birthyear : {{$stdDetail['student_profpic']}}
     <br>
     </div>
 
 @endforeach
-
 <div class="row text-white fw-bold fs-3">
     <b>History List</b>
     <table class="table table-danger text-dark fs-5">
@@ -23,16 +26,20 @@
         </thead>
         <tbody>
             @php $index = 1 @endphp
-
+            <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>10/10</td>
+            </tr>
+            {{--  @foreach ($historys as $history)
                 <tr>
-                    <td>1</td>
-                    <td>5</td>
-                    <td>score</td>
+                    <td>{{$history['score']}}/td>
+                    <td>1{{$history['student_id']}}/td>
+                    <td>1{{$history['stage_id']}}/td>
                 </tr>
-
+            @endforeach  --}}
         </tbody>
     </table>
 </div>
-
 </div>
 @endsection

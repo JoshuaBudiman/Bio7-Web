@@ -27,7 +27,7 @@
 
     <br>
     <div class="container-sm text-center text-white fs-1">
-    <a class="btn btn-warning m-5 p-3" href="">
+    <a class="btn btn-warning m-5 p-3" href={{ route('homepage') }}>
         <h4>Finish</h4>
     </a>
 </div>

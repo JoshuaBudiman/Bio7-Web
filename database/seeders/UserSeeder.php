@@ -26,6 +26,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('user123'),
             'is_login' => '0',
             'is_active' => '1',
+            'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
@@ -40,6 +41,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('ivanvincent'),
             'is_login' => '0',
             'is_active' => '1',
+            'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);

@@ -78,6 +78,7 @@ class RegisterController extends Controller
             'birthyear'=>$data['birthyear'],
             'is_login'=>'0',
             'is_active'=>'1',
+            'role'=>'user'
         ]);
     }
 }

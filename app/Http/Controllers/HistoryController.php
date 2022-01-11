@@ -55,6 +55,8 @@ class HistoryController extends Controller
      */
     public function show($id)
     {
+        $history = History::where('history_id', $id)->first();
+        return view('detailstudent', compact('history'));
         //
     }
 
